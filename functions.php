@@ -139,9 +139,10 @@ add_action( 'widgets_init', 'noonelite_widgets_init' );
  */
 function noonelite_scripts() {
 	wp_enqueue_style( 'noonelite-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'noonelite-main-style', get_template_directory_uri() . '/styles/main.css', array(), '1.00');
 	wp_style_add_data( 'noonelite-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'noonelite-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'noonelite-js', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

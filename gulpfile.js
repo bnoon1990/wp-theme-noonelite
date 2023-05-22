@@ -24,10 +24,10 @@ const customSCSSChangesMessage = {
 
 //style paths
 var sassFiles = 'sass/**/*.scss',
-    cssDest = '';
+    cssDest = 'styles/';
 
 //script paths
-var jsFiles = 'js/scripts/**/*.js',
+var jsFiles = 'js/scripts**/*.js',
     jsDest = 'js/';
 
 gulp.task('styles', function(){
